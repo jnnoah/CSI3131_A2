@@ -45,10 +45,15 @@ public class PrimeNumbersGenerator {
                     " Prime numbers less than or equal to " + num + "are : ");
 
             for (int a : prime_numbers) {
-                System.out.println(a + " in thread " + threadNumber);
+                System.out.println(a);
 
             }
-            threadNumber++;
+            try {
+                Thread.sleep(3);
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
+            System.out.println("Goodbye");
         }
 
     }
@@ -62,6 +67,8 @@ public class PrimeNumbersGenerator {
 
         PrimeNumFinder primeThread = new PrimeNumFinder(n);
         primeThread.start();
+        PrimeNumFinder primeThread2 = new PrimeNumFinder(n);
+        primeThread2.start();
 
     }
 
