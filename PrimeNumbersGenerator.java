@@ -42,7 +42,7 @@ public class PrimeNumbersGenerator {
             }
 
             System.out.println(
-                    " Prime numbers less than or equal to " + num + "are : ");
+                    " Prime numbers less than or equal to " + num + " are : ");
 
             for (int a : prime_numbers) {
                 System.out.println(a);
@@ -59,7 +59,7 @@ public class PrimeNumbersGenerator {
     }
 
     public static void main(String[] args) {
-        System.out.println("Enter a number:");
+        System.out.println("Enter a number: ");
         Scanner scanner = new Scanner(System.in);
         int n = Integer.parseInt(scanner.nextLine().trim());
 
