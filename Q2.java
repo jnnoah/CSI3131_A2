@@ -13,10 +13,10 @@ public class Q2 {
         public void run() {
             int n = fibSequence.length;
             if (n > 0) {
-                fibSequence[0] = 0;
+                fibSequence[0] = 0; // First Fibonacci number is 0
             }
             if (n > 1) {
-                fibSequence[1] = 1;
+                fibSequence[1] = 1; // Second Fibonacci number is 1
             }
             for (int i = 2; i < n; i++) {
                 fibSequence[i] = fibSequence[i - 1] + fibSequence[i - 2];
@@ -33,7 +33,7 @@ public class Q2 {
         int[] fibSequence = new int[count];
 
         FibonacciThread fibonacciThread = new FibonacciThread(fibSequence);
-        fibonacciThread.start();
+        fibonacciThread.start(); // Start the thread
 
         try {
             fibonacciThread.join(); // Wait for the child thread to finish
@@ -43,7 +43,7 @@ public class Q2 {
 
         System.out.println("Fibonacci sequence:");
         for (int num : fibSequence) {
-            System.out.print(num + " ");
+            System.out.print(num + " "); // Print Fibonacci numbers
         }
     }
 }
